@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MovieRater_KaiYang_173069A</string>
+    <string name="movie_name">Name</string>
+    <string name="movie_desc">Description</string>
+    <string name="movie_lang">Language</string>
+    <string name="movie_date">Release Date</string>
+</resources>

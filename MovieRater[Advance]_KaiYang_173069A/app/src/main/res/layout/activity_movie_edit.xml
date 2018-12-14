@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".movie_edit"
+              android:orientation="vertical">
+
+    <!--Name-->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_name"/>
+    <EditText
+            android:id="@+id/movie_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    <!--Description-->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_desc"/>
+    <EditText
+            android:id="@+id/movie_desc_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    <!--Language-->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_lang"/>
+    <RadioGroup
+            android:id="@+id/movie_lang_edit"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+                android:id="@+id/english_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="English"
+                android:checked="true"/>
+        <RadioButton
+                android:id="@+id/chinese_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Chinese"/>
+        <RadioButton
+                android:id="@+id/malay_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Malay"/>
+        <RadioButton
+                android:id="@+id/tamil_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tamil"/>
+
+    </RadioGroup>
+
+    <!--Date-->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_date"/>
+    <EditText
+            android:id="@+id/movie_date_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"/>
+
+    <!--Reason-->
+    <CheckBox
+            android:id="@+id/chkbxRating_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckBoxClicked"
+            android:text="Not Suitable for all audience"/>
+
+    <LinearLayout
+            android:id="@+id/chkbxReason_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+        <CheckBox
+                android:id="@+id/Violence_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="Violence"/>
+        <CheckBox
+                android:id="@+id/LangUsed_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:layout_toRightOf="@+id/Violence_edit"
+                android:text="Language used"/>
+
+    </LinearLayout>
+
+</LinearLayout>
